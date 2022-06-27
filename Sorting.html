@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    </body>
+   <script>
+    var arr = [100,90,80,70,60,50]
+//mutate and sort the array
+    arr.sort(function(a,b){
+	console.log(a,b)
+	return a-b;
+})
+
+console.log(arr)
+
+var arrOfObject  = [{
+	name:'Meghana',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'},
+    {name:'JS',courseCompletion:'10%'}
+  ],
+  overallScore:85
+},{
+	name:'Himanshu',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'},
+    {name:'JS',courseCompletion:'10%'}
+  ],
+  overallScore:99
+},{
+	name:'Laxman',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'}
+  ],
+  overallScore:80
+}]
+
+arrOfObject.sort(function(a,b){
+	 if(a.name > b.name){
+   	return 1;
+   } 
+   if(a.name < b.name){
+   	return -1;
+   }
+   return 0;
+});
+
+console.log(arrOfObject)
+   </script>
+</html>

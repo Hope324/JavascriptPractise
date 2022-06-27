@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>String Functions</title>
+    </head>
+
+    <body>
+
+    </body>
+  <script>
+      var name = 'himanshu'
+console.log(name)
+
+
+//length of string
+console.log(name.length)
+
+//Slice
+var slicedName =  name.slice(-4,-1);
+console.log(slicedName)
+
+//Substring
+var substringWord =  name.substring(2,4);
+console.log(substringWord)
+
+
+//substr
+var substrWord =  name.substr(2,3);
+console.log(substrWord)
+
+//Replace
+var parameters = 'name=himanshu class=board'
+var replaceSpaces = parameters.replace(' ','+')
+console.log(replaceSpaces)
+
+
+//toUpperCase
+var userId = 'LAXMANchoudhary'
+userId= 'laxmanChOUDHARY'
+userId = userId.toUpperCase();
+console.log(userId)
+
+//toLowerCase
+var userId = 'LAXMANchoudhary'
+userId= 'laxmanChOUDHARY'
+userId = userId.toLowerCase();
+console.log(userId)
+
+//concat
+var firstName = 'Laxman'
+var lastName = 'Choudhary'
+var fullName = firstName.concat(' ',lastName);
+console.log(fullName)
+
+//trim
+var userId = '    laxman.      '
+userId = userId.trim()
+console.log(userId)
+
+//padding
+var email = '9870'
+email = email.padStart(10,'X')
+console.log(email)
+
+//charAt
+
+var name = 'Meghana'
+console.log(name.charAt(4))
+
+
+//split
+
+var name = 'aaaaaaaaxaaaaaaaaxbbbbbbbbbxbbbbbbbbxccccccc'
+console.log(name.split('x'))
+
+var name = 'Yogita,Meghana,Laxman'
+console.log(name.split(','))
+
+  </script>
+</html>

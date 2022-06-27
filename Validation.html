@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" placeholder="Enter username min 8 chars" onmouseover = "getMeTheData(event)" />
+
+        <span class="check-valid"></span>
+        <span class="check-valid"></span>
+        <span class="check-valid"></span>
+    </body>
+    <script>
+        function getMeTheData(event){
+console.log('I got triggered')
+ if(event.target.value.length < 8){
+ 		document.querySelector('.check-valid').innerHTML = 'invalid'
+   document.querySelector('.check-valid').style.color='red';
+ } else {
+ 	document.querySelector('.check-valid').innerHTML = 'valid'
+  document.querySelector('.check-valid').style.color='green';
+ }
+}
+    </script>
+</html>

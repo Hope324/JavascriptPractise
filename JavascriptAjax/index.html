@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <style>
+      .divparent{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   width: 100%;
+    height: auto;
+    border: none;
+
+
+      }
+      .divchild {
+    width: 32%;
+    border: 1px solid #ccc;
+    height: auto;
+    
+    border: 2px solid black;
+    box-shadow: #ccc;
+    margin: 5px 5px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+  }
+  .divchild p{
+      
+      margin-left: 10px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  </style>
+  <body>
+    <div class="divparent" id="divparent">
+
+    </div>
+<input type="text" placeholder="Name" id="Name"/>
+<input type="text" placeholder="Email" id="Email"/>
+<input type="text" placeholder="Website" id="Website"/>
+  </body>
+  <script src="./api.js"></script>
+</html>

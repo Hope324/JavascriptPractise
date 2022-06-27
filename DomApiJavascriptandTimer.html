@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<style>
+    .time{
+    font-size:6rem;
+    text-align: center;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.timer-btn{
+    border:none;
+    outline:none;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    text-align: center;
+    padding:1rem;
+    display: inline-block;
+    margin: 0 .75rem ;
+    cursor: pointer;
+}
+</style>
+<body onload="startTimer(10)">
+    <div class="container">
+        <!-- <div id="student1" name="" data-attribute="" class="student-info">
+            Student
+        </div> -->
+        <div id="time" class="time">
+
+        </div>
+        <div id="timer" class="time">
+            00:00:00
+        </div>
+        <div class="timer-btn-container">
+            <!-- <button class="timer-btn" onclick="startTimer(10)">10seconds</button>
+            <button class="timer-btn" onclick="startTimer(30)">30seconds</button>
+            <button class="timer-btn" onclick="startTimer(60)">60seconds</button> -->
+        </div>
+    </div>
+    <script src="./DomApi.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <style>
+        *{
+  box-sizing:border-box;
+}
+.student-list{
+  display: flex;
+}
+.card{
+  width: 300px;
+  box-shadow: 3px 3px 10px #ccc;
+  padding: 0.75rem;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.card > .card-header{
+  font-size:1.2rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: .25rem;
+}
+
+.card > .card-footer{
+  font-size:0.8rem;
+  border-top: 1px solid #ccc;
+  margin-top: .25rem;
+  overflow:auto;
+}
+
+.card > .card-footer > button{
+  font-size:0.8rem;
+  float: right;
+  margin-top: 1rem;
+  background-color:DodgerBlue;
+  padding: 0.5rem;
+  border:none;
+  outline:none;
+  color: white;
+}
+
+
+    </style>
+    <body>
+        <div class='student-list'>
+            <div class="card card1">
+              <div class="card-header">
+                Student Name
+              </div>
+                <div class="card-body">
+                Courses opted : HTML , CSS, JAVSCRIPT
+              </div>
+                <div class="card-footer">
+                  <button>
+                    Close admission
+                  </button>
+              </div>
+            </div>
+            <div class="card card2">
+              <div class="card-header">
+                Student Name
+              </div>
+                <div class="card-body">
+                Courses opted : HTML , CSS, JAVSCRIPT
+              </div>
+                <div class="card-footer">
+                  <button>
+                    Close admission
+                  </button>
+              </div>
+            </div>
+            <div class="card card3">
+              <div class="card-header">
+                Student Name
+              </div>
+                <div class="card-body">
+                Courses opted : HTML , CSS, JAVSCRIPT
+              </div>
+                <div class="card-footer">
+                  <button>
+                    Close admission
+                  </button>
+              </div>
+            </div>
+            </div>
+            
+    </body>
+    <script>
+var studentInfo = {
+	name:'Laxman',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'}
+  ],
+  overallScore:85
+}
+var studentInfo1 = {
+	name:'Himanshu',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'},
+    {name:'JS',courseCompletion:'10%'}
+  ],
+  overallScore:85
+}
+
+
+var coursesOptedByStudent1 = '';
+
+for(var i=0;i<studentInfo.coursesOpted.length;i++){
+		coursesOptedByStudent1 = coursesOptedByStudent1 + studentInfo.coursesOpted[i].name + ' '
+}
+
+
+
+var studentInfo2 = {
+	name:'Meghana',
+  coursesOpted:[
+  	{name:'HTML',courseCompletion:'100%'},
+    {name:'CSS',courseCompletion:'100%'},
+    {name:'JS',courseCompletion:'10%'}
+  ],
+  overallScore:85
+}
+
+document.querySelector('.card1 .card-header').textContent = studentInfo.name
+
+document.querySelector('.card1 .card-body').textContent = coursesOptedByStudent1;
+document.querySelector('.card2 .card-header').textContent = studentInfo1.name
+document.querySelector('.card3 .card-header').textContent = studentInfo2.name
+    </script>
+</html>

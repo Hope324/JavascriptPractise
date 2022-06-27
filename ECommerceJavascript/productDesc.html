@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>product-info</title>
+</head>
+<style>
+  .product-card-img {
+    
+    height: 20rem;
+    
+  
+    transition: transform 1s;
+  }
+  .product-card-img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+</style>
+<body>
+<div class="product-info">
+    
+  </div>
+</body>
+  <script src="./products.js"></script>
+  <script>
+    var searchParams = new URLSearchParams(window.location.search);
+    var productId = searchParams.get("productId");
+    var product = productList.find(function (product) {
+      return product.id === productId;
+    });
+    console.log(product);
+    var productName = document.createElement("p");
+    productName.textContent = product.name;
+    var productImage = document.createElement("img");
+    productImage.classList.add("product-card-img");
+    productImage.src = product.imageUrl;
+    var button1=document.createElement('button');
+    button1.textContent="Buy Now";
+    
+    
+    document.querySelector(".product-info").appendChild(productImage);
+    document.querySelector(".product-info").appendChild(productName);
+    document.querySelector(".product-info").appendChild(button1);
+    //document.querySelector(".product-info").appendChild('button');
+
+  </script>
+  </html>

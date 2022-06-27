@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Bill Generator</title>
+</head>
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+.menu{
+    margin: 0rem auto;
+    width: 40%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem; 
+    margin: 2rem 2rem;
+}
+
+.menu-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.2rem 0rem;
+}
+
+.menu-item button{
+    background-color: white;
+    color: blueviolet;
+    border: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+.bill-generate button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 0.8rem 1.4rem;
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+.bill{
+    margin: 0rem auto;
+    width: 40%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    margin: 3.2rem 3.2rem;
+}
+.restaurant-detail{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.customer-detail{
+    width: 100%;
+    padding: 1rem 0rem;
+}
+
+.order-items{
+    width: 100%;
+    padding: 1rem 0rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.order-items .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bill-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0rem;
+}
+.btn{
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+</style>
+<body>
+    <!-- Menu -->
+   <div class="content">
+<div class="row mx-1">
+<div class="card col-sm-8">
+    <div class="row">
+        <div class="col-sm-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://www.whiskaffair.com/wp-content/uploads/2020/10/Dal-Makhani-2-3.jpg" class="w-100" style="height: 15rem;">
+              
+              <div class="card-text h6 fw-bolder mt-2">Dal Makhni</div>
+              <div class="card-text text-end"><button onclick="takeOrder('Dal makhni', 100)" class="btn">Order</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://c.ndtvimg.com/2021-05/k43fiip_biryani650_650x400_10_May_21.jpg" class="w-100" style="height: 15rem;">
+              
+              <div class="card-text h6 fw-bolder mt-2">Biryani</div>
+              <div class="card-text text-end"><button onclick="takeOrder('Biryani', 160)" class="btn">Order</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://www.simplyrecipes.com/thmb/1SXZ_F1GC6ww_ppWnrdbKgHi9fQ=/2000x1333/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Butter-Chicken-LEAD-2-6ca76f24bbe74114a09958073cb9c76f.jpg" class="w-100" style="height: 15rem;">
+              
+              <div class="card-text h6 fw-bolder mt-2">Butter Chicken</div>
+              <div class="card-text text-end"><button onclick="takeOrder('Butter Chicken', 150)" class="btn">Order</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://www.funfoodfrolic.com/wp-content/uploads/2021/10/Fried-Rice-Blog-Thumbnail.jpg" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Chicken Fried Rice</div>
+                <div class="card-text text-end"><button onclick="takeOrder('Chicken Fried Rice', 140)" class="btn">Order</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/03/10/spicy-chicken-curry-FT-RECIPE0321.jpg" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Chicken Curry</div>
+                <div class="card-text text-end"><button onclick="takeOrder('Chicken Curry', 220)" class="btn">Order</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://blog.pureindianfoods.com/wp-content/uploads/2018/10/indian-samosas.jpg" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Samosa</div>
+                <div class="card-text text-end"><button onclick="takeOrder('Samosa', 20)" class="btn">Order</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://static.toiimg.com/thumb/54289752.cms?imgsize=495844&width=800&height=800" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Dosa</div>
+                <div class="card-text text-end"><button class="btn" onclick="takeOrder('Dosa', 120)">Order</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Naan_shiva.jpg" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Naan</div>
+                <div class="card-text text-end"><button class="btn" onclick="takeOrder('Naan', 20)">Order</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 p-1">
+            <div class="card">
+              <div class="card-body">
+                <img src="http://foodmart.nearbyshop.in/images/detailed/17/French_Fries__6__niqi-tk.png" class="w-100" style="height: 15rem;">
+                
+                <div class="card-text h6 fw-bolder mt-2">Chicken Bucket</div>
+                <div class="card-text text-end"><button onclick="takeOrder('Chicken Bucket', 200)" class="btn">Order</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="card col-sm-4">
+    <h2 class="text-center my-1">Chur Chur Naan</h2>
+    <h6 class="text-center my-1">Dwarka sec 21,Near Pacific Mall,Gat no 12</h6>
+
+    <div class="row">
+        <p>Date: <span id="date"></span></p>
+        <p>Time: <span id="time"></span></p>
+    </div>
+    <div class="order-items">
+        <!-- <div class="item">
+            <p id="item-name">Item Name</p>
+            <p id="item-amount">Item Amount</p>
+        </div> -->
+    </div>
+    <div class="bill-amount">
+        <p>Total Amount</p>
+        <p id="bill-amount"></p>
+    </div>
+    
+    <h3>Thank You!</h3>
+<hr>
+
+
+
+    <div class="row my-1">
+        <button onclick="generateBill()" class="btn mx-2" style="width: 10rem;">Generate Bill</button>
+        <button onclick="newOrder()"  class="btn w-25 mx-2">New Order</button>
+       
+    </div>
+</div>
+</div>
+   </div>
+
+    <script>
+        var orderedItems = [];
+var orderedItemsAmount = [];
+var itemsToDisplay = '';
+var totalBill = 0;
+
+
+function takeOrder(itemName, itemAmount){
+    
+    if(itemName && itemAmount){
+        orderedItems.push(itemName);
+        // console.log(orderedItems);
+        orderedItemsAmount.push(itemAmount);
+        // console.log(orderedItemsAmount);
+    }
+
+}
+
+
+function generateBill(){
+    var today = new Date();
+
+    for(let i=0; i<orderedItems.length; i++){
+        itemsToDisplay = itemsToDisplay + '<div class="item"><p>'+orderedItems[i]+'</p><p>'+orderedItemsAmount[i]+'</p></div>';
+        totalBill += orderedItemsAmount[i];
+    }
+
+    document.getElementById('date').innerHTML = today.getDate()+'-'+today.getMonth()+'-'+today.getFullYear();
+    document.getElementById('time').innerHTML = today.getHours()+':'+today.getMinutes();
+
+    document.querySelector('.order-items').innerHTML = itemsToDisplay;
+    document.getElementById('bill-amount').innerHTML = totalBill;
+    orderedItems = [];
+    orderedItemsAmount = [];
+}
+
+function newOrder(){
+    totalBill = 0;
+    itemsToDisplay = '';
+    orderedItems = [];
+    orderedItemsAmount = [];
+    document.getElementById('date').innerHTML = '';
+    document.getElementById('time').innerHTML = '';
+
+    document.querySelector('.order-items').innerHTML = '';
+    document.getElementById('bill-amount').innerHTML = '';
+}
+
+
+    </script>
+</body>
+</html>

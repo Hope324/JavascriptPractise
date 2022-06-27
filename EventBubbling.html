@@ -1,0 +1,80 @@
+<html>
+    <head>
+<title>Event Bubbling</title>
+    </head>
+    <style>
+        div{
+  width:200px;
+  height:200px;
+  background-color:yellow;
+}
+    </style>
+    <body>
+<!--Event Bubbling -->
+<!-- <div onclick="divisclicked()">
+
+
+<button id='clickbtn' onclick="clickBtn(event)">
+click me
+</button>
+</div> -->
+
+<!-- Event Delegation -->
+<!-- <div onclick="CheckWhatIsClicked(event)">
+<button id="ClickBtn">
+clickMe
+</button>
+</div> -->
+
+<!-- AddEventListner -->
+<!-- <div>
+<button id="ClickBtn">
+clickMe
+</button>
+</div> -->
+
+<div id="div">
+    <button id="ClickBtn">
+    clickMe
+    </button>
+    </div>
+    </body>
+    <script>
+        /* Event Bubbling */
+/* function divisclicked(){
+console.log('div is clicked')
+}
+
+function clickBtn(event){
+console.log('button is clicked');
+event.stopPropagation();
+} */
+
+/* Event Delegation */
+/* function CheckWhatIsClicked(event){
+console.log(event.target.tagName)
+if(event.target.tagName==="BUTTON")
+{
+console.log("Button is clicked")
+}
+else
+{
+console.log("Div is clicked")
+}
+} */
+
+/* AddEventListener  */
+/* document.querySelector('#ClickBtn').addEventListener('click',function(){
+console.log('button is clciked')
+}) */
+
+document.querySelector('#div').addEventListener('click',function(e){
+console.log(e.target)
+},true)
+
+document.querySelector('#ClickBtn').addEventListener('click',function(e){
+console.log(e.target)
+},true)
+
+    </script>
+</html>
