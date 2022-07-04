@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeBorderRadius</title>
+</head>
+<body>
+    <div id="mydiv">
+
+    </div>
+    
+    <button onclick="Hopework()">
+    click
+    </button>
+
+    <script>
+        function Hopework(){
+setTimeout(function(){
+document.getElementById("mydiv").style.borderRadius = "50px";
+setTimeout(function(){
+document.getElementById("mydiv").style.border = "2px solid red";
+setTimeout(function(){
+document.getElementById("mydiv").style.borderRadius = "0px";
+document.getElementById("mydiv").style.border = "2px solid black";
+},1000)
+},1000)
+},1000)
+
+}
+    </script>
+</body>
+</html>

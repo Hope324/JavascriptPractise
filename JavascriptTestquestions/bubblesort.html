@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleSort</title>
+</head>
+
+<body>
+    <label>Enter Numbers:</label>
+    <input type="text" id="fieldinput" />
+    <button onClick="createSortedArray()">
+        click
+    </button>
+    <div id="hope">
+
+    </div>
+</body>
+<script>
+
+    function bblSort(arr) {
+
+        for (var i = 0; i < arr.length; i++) {
+
+
+            for (var j = 0; j < (arr.length - i - 1); j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+
+            }
+            const num = 0;
+
+            var z = document.createElement('p'); // is a node
+            z.textContent = arr.join(', ');
+            document.getElementById("hope").appendChild(z);
+        }
+    }
+
+    function createSortedArray() {
+
+        var list = Array.from(document.getElementById("fieldinput").value);
+        bblSort(list)
+
+    }
+</script>
+
+</html>

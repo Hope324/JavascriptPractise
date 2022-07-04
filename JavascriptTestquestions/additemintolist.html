@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="fieldinput" />
+    <button onClick="hope()">
+        click
+    </button>
+    <ul id="list">
+        <li>hiii</li>
+    </ul>
+    <script>
+        function hope() {
+            var text = document.getElementById("fieldinput").value;
+            var z = document.createElement('li'); // is a node
+            z.innerHTML = text;
+            document.getElementById("list").appendChild(z);
+        }
+    </script>
+</body>
+
+</html>

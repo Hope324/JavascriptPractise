@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver</title>
+</head>
+<style>
+    #myID {
+  height: 400px;
+  width: 500px;
+  background-color: red;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  
+}
+</style>
+<body>
+    <div id="myID">
+        test
+    </div>
+</body>
+<script>
+    document.getElementById("myID").addEventListener("mouseover", function() {
+    document.getElementById("myID").style.backgroundColor = "green";
+    document.getElementById("myID").style.color = "white";
+});
+    
+document.getElementById("myID").addEventListener("mouseout", function() {
+    document.getElementById("myID").style.backgroundColor = "red";
+    document.getElementById("myID").style.color = "black";
+});
+</script>
+</html>
